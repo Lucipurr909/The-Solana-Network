@@ -1,0 +1,48 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+*.tgz
+.npm
+
+# Solana/Anchor
+target/
+**/*.rs.bk
+Cargo.lock
+.anchor/
+.solana/
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build output
+dist/
+build/
+out/
+.next/
+.vercel/
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Logs
+logs/
+*.log
+lerna-debug.log*
+
+# Misc
+.cache/
+*.pem
