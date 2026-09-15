@@ -1,0 +1,26 @@
+{
+  "name": "solana-network",
+  "version": "0.1.0",
+  "description": "Permissionless social media on Solana",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix=frontend && npm install --prefix=indexer",
+    "dev": "concurrently \"npm --prefix=frontend run dev\" \"npm --prefix=indexer run dev\"",
+    "build": "npm --prefix=frontend run build && npm --prefix=indexer run build",
+    "test": "npm --prefix=programs/solana_social run test",
+    "contracts:build": "npm --prefix=programs/solana_social run build",
+    "contracts:test": "npm --prefix=programs/solana_social run test",
+    "contracts:deploy": "npm --prefix=programs/solana_social run deploy",
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0"
+  },
+  "workspaces": [
+    "frontend",
+    "indexer"
+  ]
+}
